@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Учет материалов и задач</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>📋 Учет материалов</h1>
+        </header>
+
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="write-off">Списание</button>
+            <button class="tab-btn" data-tab="ordering">Заказ</button>
+            <button class="tab-btn" data-tab="todo">Задачи</button>
+        </nav>
+
+        <div class="tab-content">
+            <!-- Вкладка списания -->
+            <div id="write-off" class="tab-pane active">
+                <div class="form">
+                    <input type="text" id="write-off-name" placeholder="Наименование материала" class="input">
+                    <input type="number" id="write-off-quantity" placeholder="Количество" class="input">
+                    <input type="text" id="write-off-purpose" placeholder="Назначение" class="input">
+                    <button onclick="addWriteOff()" class="btn btn-primary">Добавить</button>
+                </div>
+                <div class="list" id="write-off-list">
+                    <!-- Список материалов для списания -->
+                </div>
+            </div>
+
+            <!-- Вкладка заказа -->
+            <div id="ordering" class="tab-pane">
+                <div class="form">
+                    <input type="text" id="ordering-name" placeholder="Наименование материала" class="input">
+                    <input type="number" id="ordering-quantity" placeholder="Количество" class="input">
+                    <input type="text" id="ordering-purpose" placeholder="Назначение" class="input">
+                    <button onclick="addOrdering()" class="btn btn-primary">Добавить</button>
+                </div>
+                <div class="list" id="ordering-list">
+                    <!-- Список материалов для заказа -->
+                </div>
+            </div>
+
+            <!-- Вкладка задач -->
+            <div id="todo" class="tab-pane">
+                <div class="form">
+                    <input type="text" id="todo-task" placeholder="Описание задачи" class="input">
+                    <button onclick="addTodo()" class="btn btn-primary">Добавить задачу</button>
+                </div>
+                <div class="list" id="todo-list">
+                    <!-- Список задач -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
