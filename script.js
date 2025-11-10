@@ -68,7 +68,7 @@ function addWriteOff() {
     saveData();
     renderWriteOffList();
     clearWriteOffForm();
-    showAlert('Материал добавлен в список списания');
+    // showAlert('Материал добавлен в список списания');
 }
 
 // Добавление материала для заказа
@@ -94,7 +94,7 @@ function addOrdering() {
     saveData();
     renderOrderingList();
     clearOrderingForm();
-    showAlert('Материал добавлен в список заказа');
+    // showAlert('Материал добавлен в список заказа');
 }
 
 // Добавление задачи
@@ -117,7 +117,7 @@ function addTodo() {
     saveData();
     renderTodoList();
     clearTodoForm();
-    showAlert('Задача добавлена');
+    // showAlert('Задача добавлена');
 }
 
 // Удаление материала для списания
